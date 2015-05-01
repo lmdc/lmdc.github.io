@@ -19,3 +19,31 @@
     margin: $padding-large-vertical * 4;
   }
 }
+
+header {
+  nav {
+    @extend .navbar;
+    @extend .navbar-default;
+    @extend .navbar-fixed-top;
+
+    font-family: $headings-font-family;
+    border-bottom: none;
+    -webkit-font-smoothing: antialiased;
+    font-size: $font-size-large;
+
+    .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+
+      > li > a {
+        margin-left: $padding-base-horizontal;
+        margin-right: $padding-base-horizontal;
+      }
+    }
+
+    .navbar-collapse {
+      text-align: center;
+    }
+  }
+}

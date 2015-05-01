@@ -12,6 +12,13 @@ $headings-font-family: 'Cinzel', serif;
 
 $brand-primary: rgb(145, 122, 13);
 
+$navbar-height: 30px;
+$navbar-default-bg: $brand-primary;
+$navbar-default-color: #fff;
+$navbar-default-link-color: #fff;
+$navbar-default-link-hover-color: lighten($navbar-default-bg, 25%);
+$navbar-default-link-active-color: #fff;
+
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
