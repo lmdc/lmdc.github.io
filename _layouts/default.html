@@ -8,10 +8,17 @@
     {% include header.html %}
 
     <div class="container-fluid">
-        {{ content }}
+      <section class="section-vh row" id="splash">
+        <div class="container">
+            <div class="row">
+              {{ content }}
+            </div>
+            <div class="row">
+              {% include footer.html %}
+            </div>
+          </div>
+      </section>
     </div>
-
-    {% include footer.html %}
 
   </body>
 
