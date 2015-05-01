@@ -2,22 +2,18 @@
 layout: default
 ---
 
-<div class="home">
+<section class="section-vh row" id="splash">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center content">
+          <h1><img src="/images/logo.png" class="logo img-responsive" alt="La Maison de Champagne"></h1>
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+          <div class="contact-details">
+            <h2>14 Commercial Arcade &bullet; St Peter Port</h2>
+            <h2>T: 07839 777947</h2>
+            <h2>E: <a href="mailto:info@champage.gg">info@champage.gg</a></h2>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>

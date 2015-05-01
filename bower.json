@@ -1,0 +1,19 @@
+{
+  "name": "Le Maison de Champage",
+  "version": "0.0.0",
+  "homepage": "https://github.com/lmdc/lmdc.github.io",
+  "authors": [
+    "Tim Wardle <t.m.wardle@gmail.com>"
+  ],
+  "license": "Commercial",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4"
+  }
+}
