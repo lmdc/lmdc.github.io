@@ -3,9 +3,40 @@ body {
   background-size: cover;
 }
 
-#splash {
-  color: $brand-primary;
+h1 {
+  text-align: center;
+  background-color: $brand-primary;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  padding-top: $padding-base-vertical;
+  padding-bottom: $padding-base-vertical;
+  margin-left: -$grid-gutter-width;
+  margin-right: -$grid-gutter-width;
+  margin-bottom: $line-height-computed;
+  position: relative;
 
+  &:before, &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -$grid-gutter-width / 2;
+    z-index: -10;
+    border-bottom: $grid-gutter-width / 2 solid darken($brand-primary, 10%) ;
+  }
+
+  &:before {
+    border-left: $grid-gutter-width / 2 solid transparent;
+  }
+
+  &:after {
+    right: 0;
+    border-right: $grid-gutter-width / 2 solid transparent;
+  }
+}
+
+#splash {
   .content {
     background-color: rgba(222, 213, 183, 0.75);
     background-image: url(/images/texture-top.png);
