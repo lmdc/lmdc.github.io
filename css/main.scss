@@ -20,6 +20,8 @@ $navbar-default-color: #fff;
 $navbar-default-link-color: #fff;
 $navbar-default-link-hover-color: lighten($navbar-default-bg, 25%);
 $navbar-default-link-active-color: #fff;
+$navbar-default-toggle-hover-bg: darken($brand-primary, 5%);
+$navbar-default-toggle-border-color: white;
 
 
 // Using media queries with like this:

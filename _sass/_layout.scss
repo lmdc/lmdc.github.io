@@ -26,30 +26,12 @@ h1 {
   -webkit-font-smoothing: antialiased;
   padding-top: $padding-base-vertical;
   padding-bottom: $padding-base-vertical;
-  margin-left: -$grid-gutter-width;
-  margin-right: -$grid-gutter-width;
   margin-bottom: $line-height-computed;
+  margin-left: -16px;
+  margin-right: -16px;
   position: relative;
 
-  &:before, &:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: -$grid-gutter-width / 2;
-    z-index: -10;
-    border-bottom: $grid-gutter-width / 2 solid #58595b;
-  }
 
-  &:before {
-    border-left: $grid-gutter-width / 2 solid transparent;
-  }
-
-  &:after {
-    right: 0;
-    border-right: $grid-gutter-width / 2 solid transparent;
-  }
 }
 
 .google-maps {
@@ -108,25 +90,27 @@ img.signature {
 }
 
 .logo {
-  height: $line-height-computed * 15;
+  max-height: $line-height-computed * 15;
   margin-bottom: $padding-large-vertical * 2;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home {
   .logo {
     margin-bottom: $padding-large-vertical * 3;
-    height: $line-height-computed * 20;
+    max-height: $line-height-computed * 20;
   }
 }
 
 .polaroid-right {
   @extend .img-responsive;
-  @extend .pull-right;
   border: 10px solid white;
   border-bottom-width: 40px;
   -ms-transform: rotate(4deg);
   -webkit-transform: rotate(4deg);
   transform: rotate(4deg);
+  margin: 20px auto 0 auto;
 }
 
 .promotion {
@@ -239,6 +223,19 @@ header {
     .navbar-collapse {
       text-align: center;
     }
+
+    .navbar-toggle {
+      height: 22px;
+      width: 28px;
+      margin-top: 4px;
+      padding: 3px;
+      margin-bottom: 3px;
+
+      .icon-bar {
+        width: 20px;
+        background-color: white;
+      }
+    }
   }
 }
 
@@ -260,4 +257,43 @@ footer {
   font-family: $headings-font-family;
   font-size: $font-size-large;
   -webkit-font-smoothing: antialiased;
+}
+
+.text-left, .text-right {
+  text-align: center;
+}
+
+@media (min-width: $screen-md-min) {
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  h1 {
+    margin-left: -$grid-gutter-width;
+    margin-right: -$grid-gutter-width;
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -$grid-gutter-width / 2;
+      z-index: -10;
+      border-bottom: $grid-gutter-width / 2 solid #58595b;
+    }
+
+    &:before {
+      border-left: $grid-gutter-width / 2 solid transparent;
+    }
+
+    &:after {
+      right: 0;
+      border-right: $grid-gutter-width / 2 solid transparent;
+    }
+  }
 }
