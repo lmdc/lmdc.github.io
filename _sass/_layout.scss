@@ -5,6 +5,10 @@ body {
   &.about {
     background-image: url(/images/about-bg.jpg);
   }
+
+  &.tastings {
+    background-image: url(/images/tastings-bg.jpg);
+  }
 }
 
 h1 {
@@ -77,6 +81,58 @@ img.signature {
   -ms-transform: rotate(4deg);
   -webkit-transform: rotate(4deg);
   transform: rotate(4deg);
+}
+
+.promotion {
+  @extend .text-center;
+  @extend .col-md-10;
+  @extend .col-md-offset-1;
+  border: 1px solid $brand-primary;
+  background-color: rgba(222, 213, 183, 0.75);
+  font-family: $headings-font-family;
+
+  h2 {
+    font-size: floor($font-size-base * 3.2);
+    color: $brand-primary;
+
+    small {
+      display: block;
+      color: $text-color;
+    }
+  }
+
+  h3 {
+    color: $brand-primary;
+    font-size: $font-size-h2;
+  }
+
+  ul {
+    font-size: $font-size-h3;
+  }
+
+  .banner {
+    @extend .row;
+    background-color: $brand-primary;
+    color: white;
+    font-size: $font-size-h4;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    div {
+      padding: $padding-large-vertical 0;
+    }
+
+    .bottles {
+      background-image: url(/images/bottles.png);
+      background-repeat: no-repeat;
+      background-position: center top;
+      margin-top:-19px;
+      margin-bottom:-42px;
+      padding-top: 50px;
+      padding-bottom: 24px;
+      font-size: 15px;
+    }
+  }
 }
 
 header {
