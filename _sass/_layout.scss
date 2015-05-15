@@ -36,12 +36,22 @@ h1 {
   }
 }
 
+p {
+  font-size: $font-size-large;
+}
+
+img.signature {
+  @extend .pull-right;
+  margin-top: $padding-large-vertical;
+  margin-right: $padding-large-horizontal;
+}
+
 #splash {
   .content {
     background-color: rgba(222, 213, 183, 0.75);
     background-image: url(/images/texture-top.png);
     background-repeat: repeat-x;
-    padding: $padding-large-vertical * 10 $padding-large-horizontal;
+    padding: $padding-large-vertical * 8 $padding-large-horizontal;
   }
 
   .logo {
