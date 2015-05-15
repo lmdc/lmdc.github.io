@@ -9,6 +9,10 @@ body {
   &.tastings {
     background-image: url(/images/tastings-bg.jpg);
   }
+
+  &.subscriptions {
+    background-image: url(/images/subscriptions-bg.jpg);
+  }
 }
 
 h1 {
@@ -59,6 +63,27 @@ img.signature {
   background-image: url(/images/texture-top.png);
   background-repeat: repeat-x;
   padding: $padding-large-vertical * 8 $padding-large-horizontal;
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      margin: $line-height-computed / 2 0;
+    }
+
+    li:before {
+      color: $brand-primary;
+      content: 'o';
+      padding-right: $padding-base-horizontal;
+    }
+
+    &.list-unstyled {
+      li:before {
+        content: '';
+      }
+    }
+  }
 }
 
 .logo {
@@ -117,6 +142,7 @@ img.signature {
     font-size: $font-size-h4;
     margin-top: 40px;
     margin-bottom: 20px;
+    position: relative;
 
     div {
       padding: $padding-large-vertical 0;
@@ -131,6 +157,38 @@ img.signature {
       padding-top: 50px;
       padding-bottom: 24px;
       font-size: 15px;
+    }
+
+    .price {
+      position: absolute;
+      background-image: url(/images/badge.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      bottom: -30px;
+      height: 135px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      .money, .frequency {
+        width: 40px;
+        display: inline-block;
+        line-height: 1em;
+      }
+
+      .money {
+        margin-top: 35px;
+        font-size: 25px;
+        margin-left: -10px;
+
+        sup {
+          font-size: $font-size-small;
+        }
+      }
+
+      .frequency {
+        font-size: $font-size-small;
+      }
     }
   }
 }
