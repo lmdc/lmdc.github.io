@@ -3,15 +3,22 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{{ page.class }}">
 
     {% include header.html %}
 
     <div class="container-fluid">
-      <section class="section-vh row" id="splash">
+      <section class="section-vh row">
         <div class="container">
             <div class="row">
-              {{ content }}
+              <div class="col-md-12 content">
+                <div class="text-center">
+                  <img src="/images/logo.png" class="logo" alt="La Maison de Champagne">
+                </div>
+
+                <h1>{{ page.title }}</h1>
+                {{ content }}
+              </div>
             </div>
             <div class="row">
               {% include footer.html %}

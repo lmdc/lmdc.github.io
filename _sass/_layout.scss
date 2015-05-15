@@ -1,6 +1,10 @@
 body {
   background: url(/images/homepage-bg.jpg) no-repeat center center fixed;
   background-size: cover;
+
+  &.about {
+    background-image: url(/images/about-bg.jpg);
+  }
 }
 
 h1 {
@@ -23,7 +27,7 @@ h1 {
     position: absolute;
     top: -$grid-gutter-width / 2;
     z-index: -10;
-    border-bottom: $grid-gutter-width / 2 solid darken($brand-primary, 10%) ;
+    border-bottom: $grid-gutter-width / 2 solid #58595b;
   }
 
   &:before {
@@ -46,17 +50,33 @@ img.signature {
   margin-right: $padding-large-horizontal;
 }
 
-#splash {
-  .content {
-    background-color: rgba(222, 213, 183, 0.75);
-    background-image: url(/images/texture-top.png);
-    background-repeat: repeat-x;
-    padding: $padding-large-vertical * 8 $padding-large-horizontal;
-  }
+.content {
+  background-color: rgba(222, 213, 183, 0.75);
+  background-image: url(/images/texture-top.png);
+  background-repeat: repeat-x;
+  padding: $padding-large-vertical * 8 $padding-large-horizontal;
+}
 
+.logo {
+  height: $line-height-computed * 15;
+  margin-bottom: $padding-large-vertical * 2;
+}
+
+.home {
   .logo {
-    margin: 0 auto;
+    margin-bottom: $padding-large-vertical * 3;
+    height: $line-height-computed * 20;
   }
+}
+
+.polaroid-right {
+  @extend .img-responsive;
+  @extend .pull-right;
+  border: 10px solid white;
+  border-bottom-width: 40px;
+  -ms-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 
 header {
